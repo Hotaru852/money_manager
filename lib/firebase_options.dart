@@ -23,7 +23,10 @@ class DefaultFirebaseOptions {
       case TargetPlatform.android:
         return android;
       case TargetPlatform.iOS:
-        return ios;
+        throw UnsupportedError(
+          'DefaultFirebaseOptions have not been configured for ios - '
+          'you can reconfigure this by running the FlutterFire CLI again.',
+        );
       case TargetPlatform.macOS:
         throw UnsupportedError(
           'DefaultFirebaseOptions have not been configured for macos - '
@@ -47,34 +50,20 @@ class DefaultFirebaseOptions {
   }
 
   static const FirebaseOptions web = FirebaseOptions(
-    apiKey: 'AIzaSyCnU6FsB4eHX_kqUYJ-YAxZIL6dYeWXDFw',
-    appId: '1:621718528696:web:8b0c362231ab8efb164a4d',
-    messagingSenderId: '621718528696',
-    projectId: 'money-manager-c0156',
-    authDomain: 'money-manager-c0156.firebaseapp.com',
-    databaseURL: 'https://money-manager-c0156-default-rtdb.firebaseio.com',
-    storageBucket: 'money-manager-c0156.appspot.com',
-    measurementId: 'G-VF3177D0PZ',
+    apiKey: 'AIzaSyBYwf2VvpLxYvfqZbi_USjJsmvNemYMtrg',
+    appId: '1:452081077179:web:4a1e5c23e9f79c0d4ed29e',
+    messagingSenderId: '452081077179',
+    projectId: 'money-manager-6d33a',
+    authDomain: 'money-manager-6d33a.firebaseapp.com',
+    storageBucket: 'money-manager-6d33a.appspot.com',
+    measurementId: 'G-PHH90EQ627',
   );
 
   static const FirebaseOptions android = FirebaseOptions(
-    apiKey: 'AIzaSyDoXlsRM9_au7R3W74Li7l6AQCOcrJ2hzU',
-    appId: '1:621718528696:android:55f057465adda71c164a4d',
-    messagingSenderId: '621718528696',
-    projectId: 'money-manager-c0156',
-    databaseURL: 'https://money-manager-c0156-default-rtdb.firebaseio.com',
-    storageBucket: 'money-manager-c0156.appspot.com',
-  );
-
-  static const FirebaseOptions ios = FirebaseOptions(
-    apiKey: 'AIzaSyCK6rg-nkkKSBJqR8XJiObRWs5P9g9cH3I',
-    appId: '1:621718528696:ios:c8ec62badac1725a164a4d',
-    messagingSenderId: '621718528696',
-    projectId: 'money-manager-c0156',
-    databaseURL: 'https://money-manager-c0156-default-rtdb.firebaseio.com',
-    storageBucket: 'money-manager-c0156.appspot.com',
-    androidClientId: '621718528696-9b9n9hk47u7aknl6au3tqamsq39eme91.apps.googleusercontent.com',
-    iosClientId: '621718528696-2e4jmk176504slakm57o1nhprva6fkk1.apps.googleusercontent.com',
-    iosBundleId: 'com.example.leftPane',
+    apiKey: 'AIzaSyBU3OFFvh33legvv0QqnxaNquYHOtDDQ-w',
+    appId: '1:452081077179:android:5e4799d6a1a0a2654ed29e',
+    messagingSenderId: '452081077179',
+    projectId: 'money-manager-6d33a',
+    storageBucket: 'money-manager-6d33a.appspot.com',
   );
 }

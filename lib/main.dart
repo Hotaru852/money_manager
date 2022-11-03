@@ -1,25 +1,21 @@
 import 'dart:async';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
+
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_facebook_auth/flutter_facebook_auth.dart';
+import 'package:flutter_localizations/flutter_localizations.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_sign_in/google_sign_in.dart';
 import 'package:money_manager/components/Account.dart';
 import 'package:money_manager/components/Transaction.dart';
-import 'package:money_manager/screens/AccountDetailScreen.dart';
-import 'package:money_manager/screens/AddAccountScreen.dart';
-import 'package:money_manager/screens/AddTransactionScreen.dart';
-import 'package:money_manager/screens/ColumnChart.dart';
-import 'package:money_manager/screens/ContactScreen.dart';
 import 'package:provider/provider.dart';
+
 import 'components/Category.dart';
 import 'firebase_options.dart';
-import 'screens/Authentication.dart';
 import 'helpers/ChangeLanguage.dart';
-import 'package:flutter_localizations/flutter_localizations.dart';
-
+import 'screens/Authentication.dart';
 import 'screens/HomeScreen.dart';
 
 void main() async {
@@ -30,17 +26,19 @@ void main() async {
   runApp(
     ChangeNotifierProvider.value(
       value: ApplicationState.getInstance,
-      builder: (context, _) => MyApp(),
+      builder: (context, _) => const MyApp(),
     ),
   );
 }
 
 class MyApp extends StatelessWidget {
+  const MyApp({Key? key}) : super(key: key);
+
 // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return ScreenUtilInit(
-      designSize: Size(375, 812),
+      designSize: const Size(375, 812),
       builder: (BuildContext c, Widget) => MaterialApp(
         title: 'Money Manager',
         localizationsDelegates: [
@@ -223,33 +221,33 @@ class ApplicationState extends ChangeNotifier {
       notifyListeners();
     });
 
-    // var collection = FirebaseFirestore.instance.collection('expenseCategories');
-    // var myData = {'color': "0x1FB07553", 'description': "Kinh doanh", 'icon': "💼", 'index': 1};
-    // collection.doc('kinhdoanh').set(myData).then((_) => print('Added')).catchError((error) => print('Add failed: $error'));
-    // myData = {'color': "0x5FFF5342", 'description': "Giải trí", 'icon': "🕹", 'index': 2};
-    // collection.doc('giaitri').set(myData).then((_) => print('Added')).catchError((error) => print('Add failed: $error'));
-    // myData = {'color': "0x5FFFCF33", 'description': "Đi lại", 'icon': "🚖", 'index': 3};
-    // collection.doc('dilai').set(myData).then((_) => print('Added')).catchError((error) => print('Add failed: $error'));
-    // myData = {'color': "0x5FFF5342", 'description': "Học tập", 'icon': "🎓", 'index': 4};
-    // collection.doc('hoctap').set(myData).then((_) => print('Added')).catchError((error) => print('Add failed: $error'));
-    // myData = {'color': "0x5FFF5342", 'description': "Thực phẩm", 'icon': "🥕", 'index': 5};
-    // collection.doc('thucpham').set(myData).then((_) => print('Added')).catchError((error) => print('Add failed: $error'));
-    // myData = {'color': "0x5FB07553", 'description': "Chuyển khoản", 'icon': "💳", 'index': 6};
-    // collection.doc('chuyenkhoan').set(myData).then((_) => print('Added')).catchError((error) => print('Add failed: $error'));
-    // myData = {'color': "0x5FFF5342", 'description': "Quà tặng", 'icon': "🎁", 'index': 7};
-    // collection.doc('quatang').set(myData).then((_) => print('Added')).catchError((error) => print('Add failed: $error'));
-    // myData = {'color': "0x5FFFA325", 'description': "Đồ ăn", 'icon': "🍔", 'index': 8};
-    // collection.doc('doan').set(myData).then((_) => print('Added')).catchError((error) => print('Add failed: $error'));
-    // myData = {'color': "0x5FFFCF33", 'description': "Sức khoẻ", 'icon': "❤", 'index': 9};
-    // collection.doc('suckhoe').set(myData).then((_) => print('Added')).catchError((error) => print('Add failed: $error'));
-    // myData = {'color': "0x5FFF5342", 'description': "Nhà ở", 'icon': "🏠", 'index': 10};
-    // collection.doc('nhao').set(myData).then((_) => print('Added')).catchError((error) => print('Add failed: $error'));
-    // myData = {'color': "0x5FB07553", 'description': "Cà phê", 'icon': "☕", 'index': 11};
-    // collection.doc('caphe').set(myData).then((_) => print('Added')).catchError((error) => print('Add failed: $error'));
-    // myData = {'color': "0x5FFFA325", 'description': "Mua sắm", 'icon': "🛒", 'index': 12};
-    // collection.doc('muasam').set(myData).then((_) => print('Added')).catchError((error) => print('Add failed: $error'));
-    // myData = {'color': "0x5FB07553", 'description': "Thêm", 'icon': "➕", 'index': 13};
-    // collection.doc('them').set(myData).then((_) => print('Added')).catchError((error) => print('Add failed: $error'));
+    var collection = FirebaseFirestore.instance.collection('expenseCategories');
+    var myData = {'color': "0x1FB07553", 'description': "Kinh doanh", 'icon': "💼", 'index': 1};
+    collection.doc('kinhdoanh').set(myData).then((_) => print('Added')).catchError((error) => print('Add failed: $error'));
+    myData = {'color': "0x5FFF5342", 'description': "Giải trí", 'icon': "🕹", 'index': 2};
+    collection.doc('giaitri').set(myData).then((_) => print('Added')).catchError((error) => print('Add failed: $error'));
+    myData = {'color': "0x5FFFCF33", 'description': "Đi lại", 'icon': "🚖", 'index': 3};
+    collection.doc('dilai').set(myData).then((_) => print('Added')).catchError((error) => print('Add failed: $error'));
+    myData = {'color': "0x5FFF5342", 'description': "Học tập", 'icon': "🎓", 'index': 4};
+    collection.doc('hoctap').set(myData).then((_) => print('Added')).catchError((error) => print('Add failed: $error'));
+    myData = {'color': "0x5FFF5342", 'description': "Thực phẩm", 'icon': "🥕", 'index': 5};
+    collection.doc('thucpham').set(myData).then((_) => print('Added')).catchError((error) => print('Add failed: $error'));
+    myData = {'color': "0x5FB07553", 'description': "Chuyển khoản", 'icon': "💳", 'index': 6};
+    collection.doc('chuyenkhoan').set(myData).then((_) => print('Added')).catchError((error) => print('Add failed: $error'));
+    myData = {'color': "0x5FFF5342", 'description': "Quà tặng", 'icon': "🎁", 'index': 7};
+    collection.doc('quatang').set(myData).then((_) => print('Added')).catchError((error) => print('Add failed: $error'));
+    myData = {'color': "0x5FFFA325", 'description': "Đồ ăn", 'icon': "🍔", 'index': 8};
+    collection.doc('doan').set(myData).then((_) => print('Added')).catchError((error) => print('Add failed: $error'));
+    myData = {'color': "0x5FFFCF33", 'description': "Sức khoẻ", 'icon': "❤", 'index': 9};
+    collection.doc('suckhoe').set(myData).then((_) => print('Added')).catchError((error) => print('Add failed: $error'));
+    myData = {'color': "0x5FFF5342", 'description': "Nhà ở", 'icon': "🏠", 'index': 10};
+    collection.doc('nhao').set(myData).then((_) => print('Added')).catchError((error) => print('Add failed: $error'));
+    myData = {'color': "0x5FB07553", 'description': "Cà phê", 'icon': "☕", 'index': 11};
+    collection.doc('caphe').set(myData).then((_) => print('Added')).catchError((error) => print('Add failed: $error'));
+    myData = {'color': "0x5FFFA325", 'description': "Mua sắm", 'icon': "🛒", 'index': 12};
+    collection.doc('muasam').set(myData).then((_) => print('Added')).catchError((error) => print('Add failed: $error'));
+    myData = {'color': "0x5FB07553", 'description': "Thêm", 'icon': "➕", 'index': 13};
+    collection.doc('them').set(myData).then((_) => print('Added')).catchError((error) => print('Add failed: $error'));
 
     // var collection = FirebaseFirestore.instance.collection('incomeCategories');
     // var myData = {'color': "0x1FB07553", 'description': "Phiếu lương", 'icon': "💼", 'index': 1};

@@ -1,51 +1,41 @@
 {
   "project_info": {
-    "project_number": "621718528696",
-    "firebase_url": "https://money-manager-c0156-default-rtdb.firebaseio.com",
-    "project_id": "money-manager-c0156",
-    "storage_bucket": "money-manager-c0156.appspot.com"
+    "project_number": "452081077179",
+    "project_id": "money-manager-6d33a",
+    "storage_bucket": "money-manager-6d33a.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:621718528696:android:55f057465adda71c164a4d",
+        "mobilesdk_app_id": "1:452081077179:android:5e4799d6a1a0a2654ed29e",
         "android_client_info": {
           "package_name": "com.example.money_manager"
         }
       },
       "oauth_client": [
         {
-          "client_id": "621718528696-9b9n9hk47u7aknl6au3tqamsq39eme91.apps.googleusercontent.com",
-          "client_type": 1,
-          "android_info": {
-            "package_name": "com.example.money_manager",
-            "certificate_hash": "f53ae6dc083afac1f6230253dccc60eb4119bb8c"
-          }
-        },
-        {
-          "client_id": "621718528696-o83t3em6eefvebhns073tgu6k0aq6877.apps.googleusercontent.com",
-          "client_type": 1,
-          "android_info": {
-            "package_name": "com.example.money_manager",
-            "certificate_hash": "751b5173595a0965d823abdd025661252819ae59"
-          }
-        },
-        {
-          "client_id": "621718528696-mq5l2s9riet4du773621n3eah23o6s3e.apps.googleusercontent.com",
+          "client_id": "452081077179-kqlhadivu51j18tcnslnugpjs0uh3m4a.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyDoXlsRM9_au7R3W74Li7l6AQCOcrJ2hzU"
+          "current_key": "AIzaSyBU3OFFvh33legvv0QqnxaNquYHOtDDQ-w"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "621718528696-mq5l2s9riet4du773621n3eah23o6s3e.apps.googleusercontent.com",
+              "client_id": "452081077179-kqlhadivu51j18tcnslnugpjs0uh3m4a.apps.googleusercontent.com",
               "client_type": 3
+            },
+            {
+              "client_id": "452081077179-s4hdcu4fgek5kolem2piuv1oq58nchh5.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.leftPane"
+              }
             }
           ]
         }
