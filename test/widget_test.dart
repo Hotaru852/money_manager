@@ -9,14 +9,14 @@ import 'dart:io';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:money_manager/components/Category.dart';
+import 'package:money_manager/components/category.dart';
 
 import 'package:money_manager/main.dart';
 import 'package:money_manager/main1.dart';
-import 'package:money_manager/screens/CategoryScreen.dart';
-import 'package:money_manager/screens/ContactScreen.dart';
-import 'package:money_manager/screens/ExchangeMoney.dart';
-import 'package:money_manager/screens/BudgetScreen.dart';
+import 'package:money_manager/screens/category_screen.dart';
+import 'package:money_manager/screens/contact_screen.dart';
+import 'package:money_manager/screens/exchange_money.dart';
+import 'package:money_manager/screens/budget_screen.dart';
 import 'package:provider/provider.dart';
 
 void main() {

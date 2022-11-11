@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:money_manager/main.dart';
-import 'package:money_manager/screens/Authentication.dart';
+import 'package:money_manager/screens/authentication.dart';
 
 void main() {
   group('test', () {
